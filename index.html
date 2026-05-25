@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
+  <title>모두의 로또 - 약관 및 정책</title>
+  <style>
+    :root {
+      --text: #0a1e30;
+      --sub: #4a6d8a;
+      --muted: #7fa8c0;
+      --bg: #f0f5f9;
+      --card: #ffffff;
+      --border: #cfe0ec;
+      --info: #3b82f6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .container {
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 { font-size: 28px; font-weight: 900; margin: 0 0 8px; }
+    .sub { color: var(--muted); margin-bottom: 32px; font-size: 15px; }
+    .links { display: flex; flex-direction: column; gap: 12px; }
+    a.link {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 20px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 0.1s;
+    }
+    a.link:hover { transform: translateY(-1px); border-color: var(--info); }
+    .footer { margin-top: 32px; font-size: 12px; color: var(--muted); }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e5edf5;
+        --sub: #b3c5d6;
+        --muted: #7090a8;
+        --bg: #0a1928;
+        --card: #102a40;
+        --border: #1f3a55;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>모두의 로또</h1>
+    <p class="sub">약관 및 정책 문서</p>
+    <div class="links">
+      <a class="link" href="privacy.html">개인정보처리방침</a>
+      <a class="link" href="terms.html">이용약관</a>
+    </div>
+    <div class="footer">© 2026 스튜디오 노트랩</div>
+  </main>
+</body>
+</html>

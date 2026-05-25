@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
+  <title>개인정보처리방침 - 모두의 로또</title>
+  <style>
+    :root {
+      --text: #0a1e30;
+      --sub: #4a6d8a;
+      --muted: #7fa8c0;
+      --bg: #f0f5f9;
+      --card: #ffffff;
+      --border: #cfe0ec;
+      --secondary: #e6f0f7;
+      --info: #3b82f6;
+      --success: #16a34a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      margin: 0 0 8px;
+    }
+    .effective {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+    .card h2 {
+      font-size: 17px;
+      font-weight: 900;
+      margin: 0 0 10px;
+      color: var(--text);
+    }
+    .card p, .card li {
+      font-size: 14.5px;
+      color: var(--sub);
+      margin: 0 0 8px;
+    }
+    .card ul {
+      margin: 8px 0;
+      padding-left: 18px;
+    }
+    .card ul li {
+      margin-bottom: 4px;
+    }
+    .info-card {
+      background: rgba(59, 130, 246, 0.07);
+      border-color: rgba(59, 130, 246, 0.25);
+    }
+    .info-card h2 {
+      color: var(--info);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-card p {
+      font-size: 13.5px;
+    }
+    .collection-box {
+      background: var(--secondary);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+    .collection-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 8px 0;
+    }
+    .collection-item + .collection-item {
+      border-top: 1px solid var(--border);
+    }
+    .collection-item .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: rgba(22, 163, 74, 0.13);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+    .collection-item .title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .collection-item .desc {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 40px;
+    }
+    .footer a {
+      color: var(--info);
+      text-decoration: none;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e5edf5;
+        --sub: #b3c5d6;
+        --muted: #7090a8;
+        --bg: #0a1928;
+        --card: #102a40;
+        --border: #1f3a55;
+        --secondary: #15324a;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>개인정보처리방침</h1>
+    <div class="effective">시행일: 2026년 04월 29일</div>
+
+    <section class="card">
+      <h2>제1조 (개인정보의 처리 목적)</h2>
+      <p>모두의 로또(이하 "앱")는 다음의 목적으로 앱을 운영합니다.</p>
+      <ul>
+        <li>로또 번호 생성 및 관리</li>
+        <li>역대 당첨 번호 조회</li>
+        <li>QR코드를 이용한 로또 구매 내역 확인</li>
+        <li>광고 서비스 제공 (Google AdMob)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>제2조 (수집하는 개인정보 항목)</h2>
+      <p>앱 자체는 개인정보를 수집하지 않습니다. 단, 광고 서비스(Google AdMob)를 통해 아래 정보가 수집될 수 있습니다.</p>
+      <div class="collection-box">
+        <div class="collection-item">
+          <div class="icon">📷</div>
+          <div>
+            <div class="title">카메라</div>
+            <div class="desc">QR 스캔 전용. 이미지·영상을 저장하거나 전송하지 않습니다.</div>
+          </div>
+        </div>
+        <div class="collection-item">
+          <div class="icon">📍</div>
+          <div>
+            <div class="title">위치 정보</div>
+            <div class="desc">판매점 지도 기능에서 현재 위치를 일시적으로 사용합니다. 서버로 전송되거나 저장되지 않습니다.</div>
+          </div>
+        </div>
+        <div class="collection-item">
+          <div class="icon">📱</div>
+          <div>
+            <div class="title">기기 내 저장소</div>
+            <div class="desc">생성 번호·조회 내역을 기기 로컬에만 저장합니다.</div>
+          </div>
+        </div>
+        <div class="collection-item">
+          <div class="icon">📢</div>
+          <div>
+            <div class="title">광고 식별자 (IDFA/GAID)</div>
+            <div class="desc">Google AdMob이 광고 개인화 목적으로 수집할 수 있습니다. iOS에서는 앱 추적 투명성(ATT) 동의 후 수집됩니다.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>제3조 (광고 서비스)</h2>
+      <p>본 앱은 Google AdMob을 통해 광고를 제공합니다. AdMob은 광고 게재 및 개인화 목적으로 광고 식별자(IDFA/GAID), 기기 정보, IP 주소 등을 수집·활용할 수 있습니다.</p>
+      <ul>
+        <li>iOS: 앱 실행 시 앱 추적 투명성(ATT) 동의 팝업이 표시됩니다. 동의하지 않으면 비개인화 광고가 표시됩니다.</li>
+        <li>Android: 기기 설정 → Google → 광고에서 광고 ID 재설정 또는 광고 맞춤 설정을 해제할 수 있습니다.</li>
+      </ul>
+      <p>Google의 개인정보처리방침: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+    </section>
+
+    <section class="card">
+      <h2>제4조 (개인정보의 제3자 제공)</h2>
+      <p>앱이 직접 수집한 개인정보는 제3자에게 제공하지 않습니다.</p>
+      <p>단, 아래 서비스 이용 시 해당 사업자에게 데이터가 전달됩니다.</p>
+      <ul>
+        <li>당첨 번호 조회: 동행복권 공개 API에 회차 번호만 요청</li>
+        <li>AI 번호 추천: Supabase 프록시를 통해 생성된 번호와 통계 수치만 전송 (개인정보 미포함)</li>
+        <li>광고: Google AdMob에 광고 식별자 및 기기 정보 전달 (제3조 참고)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>제5조 (개인정보의 보유 및 이용기간)</h2>
+      <p>본 앱이 저장하는 모든 데이터(생성 번호, 조회 내역 등)는 이용자의 기기에만 저장되며, 앱 삭제 시 즉시 파기됩니다.</p>
+      <p>광고 식별자 관련 데이터의 보유기간은 Google의 정책을 따릅니다.</p>
+    </section>
+
+    <section class="card">
+      <h2>제6조 (이용자의 권리)</h2>
+      <p>이용자는 앱 내 설정에서 저장된 데이터를 언제든지 삭제할 수 있습니다.</p>
+      <ul>
+        <li>보관함 데이터: 생성탭 → 전체 삭제</li>
+        <li>조회 내역: 조회탭 → 전체 삭제</li>
+        <li>전체 데이터: 기기에서 앱 삭제</li>
+      </ul>
+      <p>광고 추적 거부는 iOS 설정 → 개인정보 보호 → 추적, Android 설정 → Google → 광고에서 변경할 수 있습니다.</p>
+    </section>
+
+    <section class="card">
+      <h2>제7조 (개인정보 보호책임자)</h2>
+      <p>개인정보 관련 문의 사항이 있으시면 아래로 연락해주세요.</p>
+      <ul>
+        <li>운영자: 스튜디오 노트랩</li>
+        <li>이메일: <a href="mailto:knotlabdev@gmail.com">knotlabdev@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <section class="card info-card">
+      <h2>🛡️ 최소 수집 원칙</h2>
+      <p>본 앱은 회원가입·로그인이 없으며 앱 자체는 개인정보를 수집하지 않습니다. 광고 식별자는 Google AdMob에 의해 수집되며, iOS에서는 사용자 동의 후에만 활용됩니다.</p>
+    </section>
+
+    <div class="footer">
+      © 2026 스튜디오 노트랩 (Studio Knotlab) · <a href="terms.html">이용약관</a>
+    </div>
+  </main>
+</body>
+</html>
