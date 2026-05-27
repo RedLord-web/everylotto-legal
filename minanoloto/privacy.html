@@ -22,6 +22,7 @@
     }
     [data-lang] { display: none; }
     [data-lang].active { display: block; }
+    body.embed .back-link { display: none; }
   </style>
 </head>
 <body>
@@ -223,6 +224,11 @@ function setLang(lang) {
 }
 // 優先順位: URL query > localStorage > ブラウザ言語 > ko (デフォルト)
 (function() {
+  // embed 컨텍스트 감지 → body.embed 클래스 부여 (back-link 숨김 등)
+  if (/[?&]embed=1\b/.test(location.search)) {
+    document.body.classList.add('embed');
+  }
+
   var lang = 'ko';
   var m = location.search.match(/[?&]lang=(ko|ja)/);
   if (m) {

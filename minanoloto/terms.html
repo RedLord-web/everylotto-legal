@@ -22,6 +22,7 @@
     }
     [data-lang] { display: none; }
     [data-lang].active { display: block; }
+    body.embed .back-link { display: none; }
   </style>
 </head>
 <body>
@@ -182,6 +183,10 @@ function setLang(lang) {
   try { localStorage.setItem('legal-lang', lang); } catch (e) {}
 }
 (function() {
+  if (/[?&]embed=1\b/.test(location.search)) {
+    document.body.classList.add('embed');
+  }
+
   var lang = 'ko';
   var m = location.search.match(/[?&]lang=(ko|ja)/);
   if (m) {
