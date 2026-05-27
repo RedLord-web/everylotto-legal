@@ -6,94 +6,239 @@
   <meta name="robots" content="index,follow" />
   <title>개인정보처리방침 - みんなのロト</title>
   <link rel="stylesheet" href="../style.css" />
+  <style>
+    .lang-toggle {
+      display: flex; gap: 4px; justify-content: flex-end;
+      margin-bottom: 12px;
+    }
+    .lang-toggle button {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 4px 10px; border-radius: 6px; font-size: 11px;
+      font-weight: 700; cursor: pointer; color: var(--muted);
+      font-family: inherit;
+    }
+    .lang-toggle button.active {
+      background: var(--text); border-color: var(--text); color: #fff;
+    }
+    [data-lang] { display: none; }
+    [data-lang].active { display: block; }
+  </style>
 </head>
 <body>
   <main class="container">
     <a class="back-link" href="./">← みんなのロト</a>
-    <h1>개인정보처리방침</h1>
-    <div class="effective">시행일: 2026년 05월 27일 · 앱: みんなのロト (모두의 로또 일본판)</div>
 
-    <section class="card">
-      <h2>제1조 (개인정보의 처리 목적)</h2>
-      <p>みんなのロト(이하 "앱")는 다음의 목적으로 앱을 운영합니다.</p>
-      <ul>
-        <li>일본 복권(LOTO6 / LOTO7 / MINI LOTO / NUMBERS3·4) 번호 추천 및 통계 분석</li>
-        <li>역대 당첨 번호 조회</li>
-        <li>구매 내역 관리</li>
-        <li>광고 서비스 제공 (Google AdMob)</li>
-      </ul>
-    </section>
+    <div class="lang-toggle">
+      <button id="btn-ko" class="active" onclick="setLang('ko')">한국어</button>
+      <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+    </div>
 
-    <section class="card">
-      <h2>제2조 (수집하는 개인정보 항목)</h2>
-      <p>앱 자체는 개인정보를 수집하지 않습니다. 단, 광고 서비스(Google AdMob)를 통해 아래 정보가 수집될 수 있습니다.</p>
-      <div class="collection-box">
-        <div class="collection-item">
-          <div class="icon">📱</div>
-          <div>
-            <div class="title">기기 내 저장소</div>
-            <div class="desc">생성 번호·조회 내역을 기기 로컬에만 저장합니다.</div>
+    <!-- ===== 한국어 ===== -->
+    <div data-lang="ko" class="active">
+      <h1>개인정보처리방침</h1>
+      <div class="effective">시행일: 2026년 05월 27일 · 앱: みんなのロト (모두의 로또 일본판)</div>
+
+      <section class="card">
+        <h2>제1조 (개인정보의 처리 목적)</h2>
+        <p>みんなのロト(이하 "앱")는 다음의 목적으로 앱을 운영합니다.</p>
+        <ul>
+          <li>일본 복권(LOTO6 / LOTO7 / MINI LOTO / NUMBERS3·4) 번호 추천 및 통계 분석</li>
+          <li>역대 당첨 번호 조회</li>
+          <li>구매 내역 관리</li>
+          <li>광고 서비스 제공 (Google AdMob)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>제2조 (수집하는 개인정보 항목)</h2>
+        <p>앱 자체는 개인정보를 수집하지 않습니다. 단, 광고 서비스(Google AdMob)를 통해 아래 정보가 수집될 수 있습니다.</p>
+        <div class="collection-box">
+          <div class="collection-item">
+            <div class="icon">📱</div>
+            <div>
+              <div class="title">기기 내 저장소</div>
+              <div class="desc">생성 번호·조회 내역을 기기 로컬에만 저장합니다.</div>
+            </div>
+          </div>
+          <div class="collection-item">
+            <div class="icon">📢</div>
+            <div>
+              <div class="title">광고 식별자 (IDFA/GAID)</div>
+              <div class="desc">Google AdMob이 광고 개인화 목적으로 수집할 수 있습니다. iOS에서는 앱 추적 투명성(ATT) 동의 후 수집됩니다.</div>
+            </div>
           </div>
         </div>
-        <div class="collection-item">
-          <div class="icon">📢</div>
-          <div>
-            <div class="title">광고 식별자 (IDFA/GAID)</div>
-            <div class="desc">Google AdMob이 광고 개인화 목적으로 수집할 수 있습니다. iOS에서는 앱 추적 투명성(ATT) 동의 후 수집됩니다.</div>
-          </div>
-        </div>
+      </section>
+
+      <section class="card">
+        <h2>제3조 (광고 서비스)</h2>
+        <p>본 앱은 Google AdMob을 통해 광고를 제공합니다. AdMob은 광고 게재 및 개인화 목적으로 광고 식별자(IDFA/GAID), 기기 정보, IP 주소 등을 수집·활용할 수 있습니다.</p>
+        <ul>
+          <li>iOS: 앱 실행 시 앱 추적 투명성(ATT) 동의 팝업이 표시됩니다. 동의하지 않으면 비개인화 광고가 표시됩니다.</li>
+          <li>Android: 기기 설정 → Google → 광고에서 광고 ID 재설정 또는 광고 맞춤 설정을 해제할 수 있습니다.</li>
+        </ul>
+        <p>Google의 개인정보처리방침: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+      </section>
+
+      <section class="card">
+        <h2>제4조 (개인정보의 제3자 제공)</h2>
+        <p>앱이 직접 수집한 개인정보는 제3자에게 제공하지 않습니다.</p>
+        <p>단, 아래 서비스 이용 시 해당 사업자에게 데이터가 전달됩니다.</p>
+        <ul>
+          <li>당첨 번호 조회: みずほ銀行 등 공개 데이터에 회차 번호만 요청</li>
+          <li>광고: Google AdMob에 광고 식별자 및 기기 정보 전달 (제3조 참고)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>제5조 (개인정보의 보유 및 이용기간)</h2>
+        <p>본 앱이 저장하는 모든 데이터(생성 번호, 조회 내역 등)는 이용자의 기기에만 저장되며, 앱 삭제 시 즉시 파기됩니다.</p>
+        <p>광고 식별자 관련 데이터의 보유기간은 Google의 정책을 따릅니다.</p>
+      </section>
+
+      <section class="card">
+        <h2>제6조 (이용자의 권리)</h2>
+        <p>이용자는 앱 내 설정에서 저장된 데이터를 언제든지 삭제할 수 있습니다.</p>
+        <p>광고 추적 거부는 iOS 설정 → 개인정보 보호 → 추적, Android 설정 → Google → 광고에서 변경할 수 있습니다.</p>
+      </section>
+
+      <section class="card">
+        <h2>제7조 (개인정보 보호책임자)</h2>
+        <p>개인정보 관련 문의 사항이 있으시면 아래로 연락해주세요.</p>
+        <ul>
+          <li>운영자: 스튜디오 노트랩 (Studio Knotlab / スタジオ ノットラボ)</li>
+          <li>이메일: <a href="mailto:knotlabdev@gmail.com">knotlabdev@gmail.com</a></li>
+        </ul>
+      </section>
+
+      <section class="card info-card">
+        <h2>🛡️ 최소 수집 원칙</h2>
+        <p>본 앱은 회원가입·로그인이 없으며 앱 자체는 개인정보를 수집하지 않습니다. 광고 식별자는 Google AdMob에 의해 수집되며, iOS에서는 사용자 동의 후에만 활용됩니다.</p>
+      </section>
+
+      <div class="footer">
+        © 2026 스튜디오 노트랩 · <a href="terms.html">이용약관</a>
       </div>
-    </section>
+    </div>
 
-    <section class="card">
-      <h2>제3조 (광고 서비스)</h2>
-      <p>본 앱은 Google AdMob을 통해 광고를 제공합니다. AdMob은 광고 게재 및 개인화 목적으로 광고 식별자(IDFA/GAID), 기기 정보, IP 주소 등을 수집·활용할 수 있습니다.</p>
-      <ul>
-        <li>iOS: 앱 실행 시 앱 추적 투명성(ATT) 동의 팝업이 표시됩니다. 동의하지 않으면 비개인화 광고가 표시됩니다.</li>
-        <li>Android: 기기 설정 → Google → 광고에서 광고 ID 재설정 또는 광고 맞춤 설정을 해제할 수 있습니다.</li>
-      </ul>
-      <p>Google의 개인정보처리방침: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
-    </section>
+    <!-- ===== 日本語 ===== -->
+    <div data-lang="ja">
+      <h1>プライバシーポリシー</h1>
+      <div class="effective">施行日: 2026年5月27日 · アプリ: みんなのロト</div>
 
-    <section class="card">
-      <h2>제4조 (개인정보의 제3자 제공)</h2>
-      <p>앱이 직접 수집한 개인정보는 제3자에게 제공하지 않습니다.</p>
-      <p>단, 아래 서비스 이용 시 해당 사업자에게 데이터가 전달됩니다.</p>
-      <ul>
-        <li>당첨 번호 조회: みずほ銀行 등 공개 데이터에 회차 번호만 요청</li>
-        <li>광고: Google AdMob에 광고 식별자 및 기기 정보 전달 (제3조 참고)</li>
-      </ul>
-    </section>
+      <section class="card">
+        <h2>第1条 (個人情報の処理目的)</h2>
+        <p>みんなのロト (以下「本アプリ」) は、次の目的でアプリを運営します。</p>
+        <ul>
+          <li>日本の宝くじ (LOTO6 / LOTO7 / MINI LOTO / NUMBERS3·4) の番号推奨および統計分析</li>
+          <li>過去の当選番号の照会</li>
+          <li>購入履歴の管理</li>
+          <li>広告サービスの提供 (Google AdMob)</li>
+        </ul>
+      </section>
 
-    <section class="card">
-      <h2>제5조 (개인정보의 보유 및 이용기간)</h2>
-      <p>본 앱이 저장하는 모든 데이터(생성 번호, 조회 내역 등)는 이용자의 기기에만 저장되며, 앱 삭제 시 즉시 파기됩니다.</p>
-      <p>광고 식별자 관련 데이터의 보유기간은 Google의 정책을 따릅니다.</p>
-    </section>
+      <section class="card">
+        <h2>第2条 (収集する個人情報項目)</h2>
+        <p>本アプリ自体は個人情報を収集しません。ただし、広告サービス (Google AdMob) を通じて以下の情報が収集される場合があります。</p>
+        <div class="collection-box">
+          <div class="collection-item">
+            <div class="icon">📱</div>
+            <div>
+              <div class="title">端末内ストレージ</div>
+              <div class="desc">生成した番号や照会履歴を端末ローカルにのみ保存します。</div>
+            </div>
+          </div>
+          <div class="collection-item">
+            <div class="icon">📢</div>
+            <div>
+              <div class="title">広告識別子 (IDFA/GAID)</div>
+              <div class="desc">Google AdMob が広告のパーソナライズ目的で収集する場合があります。iOS ではアプリ追跡透明性 (ATT) の同意後に収集されます。</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section class="card">
-      <h2>제6조 (이용자의 권리)</h2>
-      <p>이용자는 앱 내 설정에서 저장된 데이터를 언제든지 삭제할 수 있습니다.</p>
-      <p>광고 추적 거부는 iOS 설정 → 개인정보 보호 → 추적, Android 설정 → Google → 광고에서 변경할 수 있습니다.</p>
-    </section>
+      <section class="card">
+        <h2>第3条 (広告サービス)</h2>
+        <p>本アプリは Google AdMob を通じて広告を表示します。AdMob は広告配信およびパーソナライズの目的で、広告識別子 (IDFA/GAID)、端末情報、IP アドレスなどを収集・利用する場合があります。</p>
+        <ul>
+          <li>iOS: アプリ起動時にアプリ追跡透明性 (ATT) 同意ポップアップが表示されます。同意しない場合は非パーソナライズ広告が表示されます。</li>
+          <li>Android: 端末設定 → Google → 広告 から広告 ID の再設定、または広告のカスタマイズを無効化できます。</li>
+        </ul>
+        <p>Google のプライバシーポリシー: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+      </section>
 
-    <section class="card">
-      <h2>제7조 (개인정보 보호책임자)</h2>
-      <p>개인정보 관련 문의 사항이 있으시면 아래로 연락해주세요.</p>
-      <ul>
-        <li>운영자: 스튜디오 노트랩 (Studio Knotlab / スタジオ ノットラボ)</li>
-        <li>이메일: <a href="mailto:knotlabdev@gmail.com">knotlabdev@gmail.com</a></li>
-      </ul>
-    </section>
+      <section class="card">
+        <h2>第4条 (個人情報の第三者提供)</h2>
+        <p>本アプリが直接収集した個人情報は第三者に提供しません。</p>
+        <p>ただし、以下のサービス利用時には該当事業者にデータが送信されます。</p>
+        <ul>
+          <li>当選番号照会: みずほ銀行など公開データに回次番号のみリクエスト</li>
+          <li>広告: Google AdMob に広告識別子および端末情報を送信 (第3条参照)</li>
+        </ul>
+      </section>
 
-    <section class="card info-card">
-      <h2>🛡️ 최소 수집 원칙</h2>
-      <p>본 앱은 회원가입·로그인이 없으며 앱 자체는 개인정보를 수집하지 않습니다. 광고 식별자는 Google AdMob에 의해 수집되며, iOS에서는 사용자 동의 후에만 활용됩니다.</p>
-    </section>
+      <section class="card">
+        <h2>第5条 (個人情報の保有および利用期間)</h2>
+        <p>本アプリが保存するすべてのデータ (生成番号、照会履歴など) は利用者の端末にのみ保存され、アプリ削除時に即座に破棄されます。</p>
+        <p>広告識別子に関連するデータの保有期間は Google のポリシーに従います。</p>
+      </section>
 
-    <div class="footer">
-      © 2026 스튜디오 노트랩 · <a href="terms.html">이용약관</a>
+      <section class="card">
+        <h2>第6条 (利用者の権利)</h2>
+        <p>利用者はアプリ内設定からいつでも保存データを削除できます。</p>
+        <p>広告トラッキングの拒否は、iOS 設定 → プライバシーとセキュリティ → トラッキング、または Android 設定 → Google → 広告から変更できます。</p>
+      </section>
+
+      <section class="card">
+        <h2>第7条 (個人情報保護責任者)</h2>
+        <p>個人情報に関するお問い合わせは下記までご連絡ください。</p>
+        <ul>
+          <li>運営者: スタジオ ノットラボ (Studio Knotlab)</li>
+          <li>メール: <a href="mailto:knotlabdev@gmail.com">knotlabdev@gmail.com</a></li>
+        </ul>
+      </section>
+
+      <section class="card info-card">
+        <h2>🛡️ 最小収集原則</h2>
+        <p>本アプリは会員登録・ログイン機能はなく、アプリ自体は個人情報を収集しません。広告識別子は Google AdMob によって収集され、iOS ではユーザーの同意後にのみ利用されます。</p>
+      </section>
+
+      <div class="footer">
+        © 2026 スタジオ ノットラボ · <a href="terms.html">利用規約</a>
+      </div>
     </div>
   </main>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.dataset.lang === lang);
+  });
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+  var btn = document.getElementById('btn-' + lang);
+  if (btn) btn.classList.add('active');
+  document.documentElement.lang = lang;
+  try { localStorage.setItem('legal-lang', lang); } catch (e) {}
+}
+// 優先順位: URL query > localStorage > ブラウザ言語 > ko (デフォルト)
+(function() {
+  var lang = 'ko';
+  var m = location.search.match(/[?&]lang=(ko|ja)/);
+  if (m) {
+    lang = m[1];
+  } else {
+    try {
+      var saved = localStorage.getItem('legal-lang');
+      if (saved === 'ko' || saved === 'ja') {
+        lang = saved;
+      } else if ((navigator.language || '').slice(0,2) === 'ja') {
+        lang = 'ja';
+      }
+    } catch (e) {}
+  }
+  setLang(lang);
+})();
+</script>
 </body>
 </html>

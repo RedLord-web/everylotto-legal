@@ -6,74 +6,198 @@
   <meta name="robots" content="index,follow" />
   <title>이용약관 - みんなのロト</title>
   <link rel="stylesheet" href="../style.css" />
+  <style>
+    .lang-toggle {
+      display: flex; gap: 4px; justify-content: flex-end;
+      margin-bottom: 12px;
+    }
+    .lang-toggle button {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 4px 10px; border-radius: 6px; font-size: 11px;
+      font-weight: 700; cursor: pointer; color: var(--muted);
+      font-family: inherit;
+    }
+    .lang-toggle button.active {
+      background: var(--text); border-color: var(--text); color: #fff;
+    }
+    [data-lang] { display: none; }
+    [data-lang].active { display: block; }
+  </style>
 </head>
 <body>
   <main class="container">
     <a class="back-link" href="./">← みんなのロト</a>
-    <h1>이용약관</h1>
-    <div class="effective">시행일: 2026년 05월 27일 · 앱: みんなのロト (모두의 로또 일본판)</div>
 
-    <section class="card">
-      <h2>제1조 (목적)</h2>
-      <p>본 약관은 스튜디오 노트랩(이하 "운영자")이 제공하는 모바일 애플리케이션 "みんなのロト"(이하 "앱")의 이용 조건과 절차, 운영자와 이용자 간의 권리·의무 및 책임 사항을 규정합니다.</p>
-    </section>
+    <div class="lang-toggle">
+      <button id="btn-ko" class="active" onclick="setLang('ko')">한국어</button>
+      <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+    </div>
 
-    <section class="card">
-      <h2>제2조 (서비스 내용)</h2>
-      <p>앱은 다음 서비스를 제공합니다.</p>
-      <ul>
-        <li>일본 복권(LOTO6 / LOTO7 / MINI LOTO / NUMBERS3·4) 과거 당첨 번호 데이터에 기반한 번호 추천 및 통계 분석</li>
-        <li>당첨 번호 조회 및 보관함 기능</li>
-        <li>광고 시청을 통한 무료 추천 횟수 추가</li>
-        <li>유료 결제(인앱 결제)를 통한 프리미엄 기능 제공</li>
-      </ul>
-    </section>
+    <!-- ===== 한국어 ===== -->
+    <div data-lang="ko" class="active">
+      <h1>이용약관</h1>
+      <div class="effective">시행일: 2026년 05월 27일 · 앱: みんなのロト (모두의 로또 일본판)</div>
 
-    <section class="card">
-      <h2>제3조 (이용자의 의무)</h2>
-      <p>이용자는 다음 행위를 해서는 안 됩니다.</p>
-      <ul>
-        <li>앱을 도박·사행성 목적의 권유·홍보 수단으로 사용</li>
-        <li>앱의 결과물을 활용하여 타인에게 당첨을 보장하는 듯한 주장</li>
-        <li>앱을 역공학·복제·재배포 또는 상업적으로 무단 이용</li>
-        <li>만 19세 미만(일본 거주자의 경우 만 20세 미만) 이용자가 본 앱의 추천 결과로 복권을 구매하도록 유도하는 행위</li>
-      </ul>
-    </section>
+      <section class="card">
+        <h2>제1조 (목적)</h2>
+        <p>본 약관은 스튜디오 노트랩(이하 "운영자")이 제공하는 모바일 애플리케이션 "みんなのロト"(이하 "앱")의 이용 조건과 절차, 운영자와 이용자 간의 권리·의무 및 책임 사항을 규정합니다.</p>
+      </section>
 
-    <section class="card warning-card">
-      <h2>⚠️ 제4조 (운영자의 책임 제한)</h2>
-      <p>① 앱이 제공하는 번호 추천은 과거 당첨 데이터의 통계적 분석에 기반한 참고용 정보이며, 실제 당첨을 보장하지 않습니다.</p>
-      <p>② 로또 추첨은 본질적으로 무작위 사건이므로, 앱 이용으로 발생한 복권 구매 비용·기대수익 손실 등 일체의 직간접 손실에 대해 운영자는 책임지지 않습니다.</p>
-      <p>③ 앱은 みずほ銀行·일본 정부·복권 발행 주체의 공식 앱이 아니며, 운영자는 해당 기관과 일체 관련이 없습니다.</p>
-      <p>④ 천재지변, 통신장애, 제3자 서비스(Google·Apple·AdMob·RevenueCat 등) 장애로 발생한 손해에 대해 운영자는 책임지지 않습니다.</p>
-    </section>
+      <section class="card">
+        <h2>제2조 (서비스 내용)</h2>
+        <p>앱은 다음 서비스를 제공합니다.</p>
+        <ul>
+          <li>일본 복권(LOTO6 / LOTO7 / MINI LOTO / NUMBERS3·4) 과거 당첨 번호 데이터에 기반한 번호 추천 및 통계 분석</li>
+          <li>당첨 번호 조회 및 보관함 기능</li>
+          <li>광고 시청을 통한 무료 추천 횟수 추가</li>
+          <li>유료 결제(인앱 결제)를 통한 프리미엄 기능 제공</li>
+        </ul>
+      </section>
 
-    <section class="card">
-      <h2>제5조 (유료 결제 및 환불)</h2>
-      <p>유료 결제는 Google Play 또는 Apple App Store의 인앱 결제 시스템을 통해 이루어지며, 환불은 각 스토어의 환불 정책을 따릅니다. 운영자는 스토어를 통하지 않은 직접 환불을 제공하지 않습니다.</p>
-    </section>
+      <section class="card">
+        <h2>제3조 (이용자의 의무)</h2>
+        <p>이용자는 다음 행위를 해서는 안 됩니다.</p>
+        <ul>
+          <li>앱을 도박·사행성 목적의 권유·홍보 수단으로 사용</li>
+          <li>앱의 결과물을 활용하여 타인에게 당첨을 보장하는 듯한 주장</li>
+          <li>앱을 역공학·복제·재배포 또는 상업적으로 무단 이용</li>
+          <li>만 19세 미만(일본 거주자의 경우 만 20세 미만) 이용자가 본 앱의 추천 결과로 복권을 구매하도록 유도하는 행위</li>
+        </ul>
+      </section>
 
-    <section class="card">
-      <h2>제6조 (서비스 변경 및 종료)</h2>
-      <p>운영자는 사전 고지 후 앱의 기능을 변경하거나 서비스를 종료할 수 있습니다. 다만 유료 결제로 제공되는 기능의 본질적 변경 시에는 합리적 범위 내에서 보상 또는 환불을 고려합니다.</p>
-    </section>
+      <section class="card warning-card">
+        <h2>⚠️ 제4조 (운영자의 책임 제한)</h2>
+        <p>① 앱이 제공하는 번호 추천은 과거 당첨 데이터의 통계적 분석에 기반한 참고용 정보이며, 실제 당첨을 보장하지 않습니다.</p>
+        <p>② 로또 추첨은 본질적으로 무작위 사건이므로, 앱 이용으로 발생한 복권 구매 비용·기대수익 손실 등 일체의 직간접 손실에 대해 운영자는 책임지지 않습니다.</p>
+        <p>③ 앱은 みずほ銀行·일본 정부·복권 발행 주체의 공식 앱이 아니며, 운영자는 해당 기관과 일체 관련이 없습니다.</p>
+        <p>④ 천재지변, 통신장애, 제3자 서비스(Google·Apple·AdMob·RevenueCat 등) 장애로 발생한 손해에 대해 운영자는 책임지지 않습니다.</p>
+      </section>
 
-    <section class="card">
-      <h2>제7조 (분쟁 해결)</h2>
-      <p>본 약관과 관련하여 운영자와 이용자 간에 분쟁이 발생한 경우 양자는 성실히 협의하여 해결하며, 협의가 불가능한 경우 대한민국 민사소송법에 따른 관할 법원에 따릅니다.</p>
-    </section>
+      <section class="card">
+        <h2>제5조 (유료 결제 및 환불)</h2>
+        <p>유료 결제는 Google Play 또는 Apple App Store의 인앱 결제 시스템을 통해 이루어지며, 환불은 각 스토어의 환불 정책을 따릅니다. 운영자는 스토어를 통하지 않은 직접 환불을 제공하지 않습니다.</p>
+      </section>
 
-    <section class="card">
-      <h2>제8조 (문의)</h2>
-      <ul>
-        <li>운영자: 스튜디오 노트랩 (Studio Knotlab / スタジオ ノットラボ)</li>
-        <li>이메일: <a href="mailto:knotlabdev@gmail.com">knotlabdev@gmail.com</a></li>
-      </ul>
-    </section>
+      <section class="card">
+        <h2>제6조 (서비스 변경 및 종료)</h2>
+        <p>운영자는 사전 고지 후 앱의 기능을 변경하거나 서비스를 종료할 수 있습니다. 다만 유료 결제로 제공되는 기능의 본질적 변경 시에는 합리적 범위 내에서 보상 또는 환불을 고려합니다.</p>
+      </section>
 
-    <div class="footer">
-      © 2026 스튜디오 노트랩 · <a href="privacy.html">개인정보처리방침</a>
+      <section class="card">
+        <h2>제7조 (분쟁 해결)</h2>
+        <p>본 약관과 관련하여 운영자와 이용자 간에 분쟁이 발생한 경우 양자는 성실히 협의하여 해결하며, 협의가 불가능한 경우 대한민국 민사소송법에 따른 관할 법원에 따릅니다.</p>
+      </section>
+
+      <section class="card">
+        <h2>제8조 (문의)</h2>
+        <ul>
+          <li>운영자: 스튜디오 노트랩 (Studio Knotlab / スタジオ ノットラボ)</li>
+          <li>이메일: <a href="mailto:knotlabdev@gmail.com">knotlabdev@gmail.com</a></li>
+        </ul>
+      </section>
+
+      <div class="footer">
+        © 2026 스튜디오 노트랩 · <a href="privacy.html">개인정보처리방침</a>
+      </div>
+    </div>
+
+    <!-- ===== 日本語 ===== -->
+    <div data-lang="ja">
+      <h1>利用規約</h1>
+      <div class="effective">施行日: 2026年5月27日 · アプリ: みんなのロト</div>
+
+      <section class="card">
+        <h2>第1条 (目的)</h2>
+        <p>本規約は、スタジオ ノットラボ (以下「運営者」) が提供するモバイルアプリケーション「みんなのロト」 (以下「本アプリ」) の利用条件と手順、運営者と利用者間の権利・義務および責任事項を規定します。</p>
+      </section>
+
+      <section class="card">
+        <h2>第2条 (サービス内容)</h2>
+        <p>本アプリは次のサービスを提供します。</p>
+        <ul>
+          <li>日本の宝くじ (LOTO6 / LOTO7 / MINI LOTO / NUMBERS3·4) の過去当選番号データに基づく番号推奨および統計分析</li>
+          <li>当選番号の照会および保管庫機能</li>
+          <li>広告視聴による無料推奨回数の追加</li>
+          <li>有料決済 (アプリ内課金) によるプレミアム機能の提供</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>第3条 (利用者の義務)</h2>
+        <p>利用者は次の行為をしてはなりません。</p>
+        <ul>
+          <li>本アプリをギャンブル・射幸性目的の勧誘・宣伝手段として使用すること</li>
+          <li>本アプリの結果物を活用して他人に当選を保証するかのような主張をすること</li>
+          <li>本アプリをリバースエンジニアリング・複製・再配布、または商業的に無断利用すること</li>
+          <li>満20歳未満の利用者に本アプリの推奨結果で宝くじを購入させるよう誘導する行為</li>
+        </ul>
+      </section>
+
+      <section class="card warning-card">
+        <h2>⚠️ 第4条 (運営者の責任制限)</h2>
+        <p>① 本アプリが提供する番号推奨は、過去の当選データの統計的分析に基づく参考用情報であり、実際の当選を保証するものではありません。</p>
+        <p>② 宝くじの抽選は本質的に無作為事象であるため、本アプリの利用によって発生した宝くじ購入費用・期待収益損失などの一切の直接・間接的損失について、運営者は責任を負いません。</p>
+        <p>③ 本アプリはみずほ銀行・日本政府・宝くじ発行主体の公式アプリではなく、運営者は当該機関と一切関係ありません。</p>
+        <p>④ 天災地変、通信障害、第三者サービス (Google・Apple・AdMob・RevenueCat など) の障害によって発生した損害について、運営者は責任を負いません。</p>
+      </section>
+
+      <section class="card">
+        <h2>第5条 (有料決済および返金)</h2>
+        <p>有料決済は Google Play または Apple App Store のアプリ内課金システムを通じて行われ、返金は各ストアの返金ポリシーに従います。運営者はストアを介さない直接返金は提供しません。</p>
+      </section>
+
+      <section class="card">
+        <h2>第6条 (サービス変更および終了)</h2>
+        <p>運営者は事前告知の上、本アプリの機能を変更またはサービスを終了することがあります。ただし、有料決済で提供される機能の本質的変更時には、合理的な範囲内で補償または返金を検討します。</p>
+      </section>
+
+      <section class="card">
+        <h2>第7条 (紛争解決)</h2>
+        <p>本規約に関連して運営者と利用者間に紛争が発生した場合、双方は誠実に協議し解決するものとし、協議が不可能な場合は大韓民国民事訴訟法に基づく管轄裁判所によります。</p>
+      </section>
+
+      <section class="card">
+        <h2>第8条 (お問い合わせ)</h2>
+        <ul>
+          <li>運営者: スタジオ ノットラボ (Studio Knotlab)</li>
+          <li>メール: <a href="mailto:knotlabdev@gmail.com">knotlabdev@gmail.com</a></li>
+        </ul>
+      </section>
+
+      <div class="footer">
+        © 2026 スタジオ ノットラボ · <a href="privacy.html">プライバシーポリシー</a>
+      </div>
     </div>
   </main>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.dataset.lang === lang);
+  });
+  document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+  var btn = document.getElementById('btn-' + lang);
+  if (btn) btn.classList.add('active');
+  document.documentElement.lang = lang;
+  try { localStorage.setItem('legal-lang', lang); } catch (e) {}
+}
+(function() {
+  var lang = 'ko';
+  var m = location.search.match(/[?&]lang=(ko|ja)/);
+  if (m) {
+    lang = m[1];
+  } else {
+    try {
+      var saved = localStorage.getItem('legal-lang');
+      if (saved === 'ko' || saved === 'ja') {
+        lang = saved;
+      } else if ((navigator.language || '').slice(0,2) === 'ja') {
+        lang = 'ja';
+      }
+    } catch (e) {}
+  }
+  setLang(lang);
+})();
+</script>
 </body>
 </html>
